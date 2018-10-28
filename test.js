@@ -1,6 +1,7 @@
 const assert = require('assert');
 Object.freeze(assert);
 const sumOfOther = require('./src/sumOfOther');
+const make = require("./src/make");
 const recursion = require("./src/recursion");
 
 describe('SumOfOther:', () => {
@@ -14,6 +15,33 @@ describe('SumOfOther:', () => {
 
   it('3', () => {
   assert.deepEqual(sumOfOther([]), []);
+  });
+});
+
+describe("make:", () => {
+  function sum(a, b) {
+      return a + b;
+  }
+  function mult(a, b) {
+      return a * b;
+  }
+  function mod(a, b) {
+      return a % b;
+  }
+  it("Sum of numbers", () => {
+      assert.equal(make(1)(1)(2)(100)(1)(sum), 105);
+  });
+  it("Sum of numbers and array", () => {
+      assert.equal(make(1)(1)(2)([1, 2, 3, 1000])(1)(sum), 1011);
+  });
+  it("Sum of numbers and arrays", () => {
+      assert.equal(make(1)(1)(2)([1, 2, 3, 1000, [1, 100, [33, 22, [1]]]])(1)(sum), 1168);
+  }); 
+  it("Multiply", () => {
+      assert.equal(make(100)(5)(2)(3)(mult), 3000);
+  });
+  it("Mod", () => {
+      assert.equal(make(19)(9)(mod), 1);
   });
 });
 
