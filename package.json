@@ -1,0 +1,20 @@
+{
+  "name": "rsschool-codejam",
+  "version": "1.0.0",
+  "description": "rssschool-codejam",
+  "main": "test.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Metalhammer4/rsschool-codejam"
+  },
+  "author": "Metalhammer4",
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "mocha": "^5.2.0"
+  }
+}
